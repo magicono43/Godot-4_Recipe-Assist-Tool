@@ -19,7 +19,6 @@ func _ready() -> void:
 	newLineParent.entry_deleted.connect(_on_entry_deleted)
 
 func _on_new_entry_created(newNode: Node):
-	#print("Event received, bitch ass.   ", newNode.name)
 	visible = false
 	for child in get_node("VBoxContainer").get_children():
 		child.queue_free()
@@ -31,7 +30,6 @@ func _on_entry_deleted():
 		child.queue_free()
 
 func _on_text_changed_extended(new_text: String, source: Node):
-	#print("Fuck You Nigger.   ", new_text, source.name)
 	var line_rect = source.get_global_rect()
 	size.x = line_rect.size.x
 	size.y = line_rect.size.y

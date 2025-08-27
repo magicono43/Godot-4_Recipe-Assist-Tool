@@ -13,7 +13,7 @@ func _init() -> void:
 
 	# Create LineEdit (the input box)
 	line_edit = LineEdit.new()
-	line_edit.placeholder_text = "Type Here Bitch 1"
+	line_edit.placeholder_text = "Type Here 1"
 	line_edit.alignment = HORIZONTAL_ALIGNMENT_CENTER
 	line_edit.custom_minimum_size = Vector2(250, 35)
 	line_edit.size_flags_horizontal = Control.SIZE_SHRINK_CENTER

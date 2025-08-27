@@ -7,8 +7,6 @@ func _ready() -> void:
 	parent.text_changed_extended_forwarded.connect(_on_text_changed_extended_forwarded)
 
 func _on_text_changed_extended_forwarded(new_text: String, source: Node):
-	#print("Fuck You Faggot.   ", new_text, source.name)
-
 	get_parent().visible = false
 
 	for child in get_children():

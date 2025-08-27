@@ -3,6 +3,10 @@ extends VBoxContainer
 signal new_entry_created(newNode: Node)
 signal entry_deleted()
 
+func _ready() -> void:
+	new_entry_created.connect(_on_new_entry_created)
+	entry_deleted.connect(_on_entry_deleted)
+
 func _on_button_pressed() -> void:
 
 	var h_box_container = HBoxContainer.new()
@@ -13,17 +17,8 @@ func _on_button_pressed() -> void:
 	h_box_container.clip_contents = true
 	add_child(h_box_container)
 
-	var entryNumber: int = 0
-	for entry in get_children():
-		if entry is HBoxContainer:
-			entryNumber += 1
-
-	## Now have all previous h_box_container children update their values,
-	## but this would likely be better as an event that occurs when a new
-	## entry is made or a previous one is deleted, etc.
-
 	var label_1 = Label.new()
-	label_1.text = str(entryNumber)
+	label_1.text = str(0)
 	label_1.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	label_1.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
 	label_1.custom_minimum_size = Vector2(20, 35)
@@ -44,10 +39,22 @@ func _on_button_pressed() -> void:
 	h_box_container.add_child(button_1)
 	button_1.pressed.connect(_on_remove_pressed.bind(button_1))
 
-	## Next try and get the "entry order" number to actually be
-	## accurate and update based on the entries and order.
-
 	emit_signal("new_entry_created", custom_line_edit)
+
+func _on_new_entry_created(newNode: Node):
+	await get_tree().process_frame
+	_update_label_numbers()
+
+func _on_entry_deleted():
+	await get_tree().process_frame
+	_update_label_numbers()
+
+func _update_label_numbers():
+	var entryNumber: int = 0
+	for entry in get_children():
+		if entry is HBoxContainer:
+			entryNumber += 1
+			entry.get_child(0).text = str(entryNumber)
 
 func _on_remove_pressed(button: Button) -> void:
 	button.get_parent().queue_free()
