@@ -14,6 +14,10 @@ config/name="Recipe_Assist_Tool"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[autoload]
+
+IngredientDB="*res://Scripts/IngredientData.gd"
+
 [rendering]
 
 renderer/rendering_method="gl_compatibility"

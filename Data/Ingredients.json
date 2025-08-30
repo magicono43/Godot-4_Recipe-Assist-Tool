@@ -1,0 +1,422 @@
+{
+  "Cake Flour": { 
+	"weight_per_cup": 120, 
+	"category": "Dry" 
+  },
+  "All Purpose Flour": { 
+    "weight_per_cup": 120, 
+    "category": "Dry" 
+  },
+  "Bread Flour": { 
+	"weight_per_cup": 120, 
+	"category": "Dry" 
+  },
+  "Semolina Flour": { 
+	"weight_per_cup": 163, 
+	"category": "Dry" 
+  },
+  "Almond Flour": { 
+	"weight_per_cup": 200, 
+	"category": "Dry" 
+  },
+  "Cornmeal": { 
+    "weight_per_cup": 144, 
+    "category": "Dry" 
+  },
+  "Oats": { 
+    "weight_per_cup": 89, 
+    "category": "Dry" 
+  },
+  "Graham Cracker Crumbs": { 
+    "weight_per_cup": 100, 
+    "category": "Dry" 
+  },
+  "Yeast": { 
+    "weight_per_cup": 144, 
+    "category": "Dry" 
+  },
+  "Corn Starch": { 
+    "weight_per_cup": 112, 
+    "category": "Dry" 
+  },
+  "Baking Powder": { 
+    "weight_per_cup": 192, 
+    "category": "Dry" 
+  },
+  "Baking Soda": { 
+    "weight_per_cup": 288, 
+    "category": "Dry" 
+  },
+  "Cream of Tartar": { 
+    "weight_per_cup": 200, 
+    "category": "Dry" 
+  },
+  "Salt": { 
+    "weight_per_cup": 288, 
+    "category": "Dry" 
+  },
+  "Cocoa Powder": { 
+    "weight_per_cup": 85, 
+    "category": "Dry" 
+  },
+  "Demerara Sugar": { 
+    "weight_per_cup": 220, 
+    "category": "Dry" 
+  },
+  "Turbinado Sugar": { 
+    "weight_per_cup": 180, 
+    "category": "Dry" 
+  },
+  "Granulated Sugar": { 
+    "weight_per_cup": 198, 
+    "category": "Dry" 
+  },
+  "Powdered Sugar": { 
+    "weight_per_cup": 113, 
+    "category": "Dry" 
+  },
+  "Light Brown Sugar": { 
+    "weight_per_cup": 213, 
+    "category": "Dry" 
+  },
+  "Dark Brown Sugar": { 
+    "weight_per_cup": 213, 
+    "category": "Dry" 
+  },
+  "Water": { 
+    "weight_per_cup": 227, 
+    "category": "Wet" 
+  },
+  "Lemon Juice": { 
+    "weight_per_cup": 224, 
+    "category": "Acid" 
+  },
+  "Lime Juice": { 
+    "weight_per_cup": 224, 
+    "category": "Acid" 
+  },
+  "White Vinegar": { 
+    "weight_per_cup": 227, 
+    "category": "Acid" 
+  },
+  "Grated Cheddar Cheese": { 
+    "weight_per_cup": 113, 
+    "category": "Dairy" 
+  },
+  "Grated Mozzarella Cheese": { 
+    "weight_per_cup": 113, 
+    "category": "Dairy" 
+  },
+  "Grated Parmesan Cheese": { 
+    "weight_per_cup": 100, 
+    "category": "Dairy" 
+  },
+  "Feta Cheese": { 
+    "weight_per_cup": 113, 
+    "category": "Dairy" 
+  },
+  "Cottage Cheese": { 
+    "weight_per_cup": 227, 
+    "category": "Dairy" 
+  },
+  "Ricotta Cheese": { 
+    "weight_per_cup": 227, 
+    "category": "Dairy" 
+  },
+  "Cream Cheese": { 
+    "weight_per_cup": 227, 
+    "category": "Dairy" 
+  },
+  "Sweetened Condensed Milk": { 
+    "weight_per_cup": 312, 
+    "category": "Dairy" 
+  },
+  "Sour Cream": { 
+    "weight_per_cup": 227, 
+    "category": "Dairy" 
+  },
+  "Greek Yogurt": { 
+    "weight_per_cup": 227, 
+    "category": "Dairy" 
+  },
+  "Yogurt": { 
+    "weight_per_cup": 227, 
+    "category": "Dairy" 
+  },
+  "Heavy Whipping Cream": { 
+    "weight_per_cup": 227, 
+    "category": "Dairy" 
+  },
+  "Buttermilk": { 
+    "weight_per_cup": 227, 
+    "category": "Dairy" 
+  },
+  "Half And Half": { 
+    "weight_per_cup": 227, 
+    "category": "Dairy" 
+  },
+  "Whole Milk": { 
+    "weight_per_cup": 227, 
+    "category": "Dairy" 
+  },
+  "Applesauce": { 
+    "weight_per_cup": 255, 
+    "category": "Wet" 
+  },
+  "Molasses": { 
+    "weight_per_cup": 340, 
+    "category": "Wet" 
+  },
+  "Honey": { 
+    "weight_per_cup": 336, 
+    "category": "Wet" 
+  },
+  "Corn Syrup": { 
+    "weight_per_cup": 312, 
+    "category": "Wet" 
+  },
+  "Agave Syrup": { 
+    "weight_per_cup": 336, 
+    "category": "Wet" 
+  },
+  "Egg": { 
+    "weight_per_cup": 50, 
+    "category": "Wet" 
+  },
+  "Egg Yolk": { 
+    "weight_per_cup": 15, 
+    "category": "Wet" 
+  },
+  "Egg White": { 
+    "weight_per_cup": 35, 
+    "category": "Wet" 
+  },
+  "Meringue Powder": { 
+    "weight_per_cup": 172, 
+    "category": "Powder" 
+  },
+  "Coconut": { 
+    "weight_per_cup": 85, 
+    "category": "Fat" 
+  },
+  "Almond Paste": { 
+    "weight_per_cup": 227, 
+    "category": "Fat" 
+  },
+  "Butter": { 
+    "weight_per_cup": 227, 
+    "category": "Fat" 
+  },
+  "Vegetable Shortening": { 
+    "weight_per_cup": 184, 
+    "category": "Fat" 
+  },
+  "Ghee": { 
+    "weight_per_cup": 176, 
+    "category": "Fat" 
+  },
+  "Mayonnaise": { 
+    "weight_per_cup": 226, 
+    "category": "Fat" 
+  },
+  "Olive Oil": { 
+    "weight_per_cup": 200, 
+    "category": "Fat" 
+  },
+  "Vegetable Oil": { 
+    "weight_per_cup": 198, 
+    "category": "Fat" 
+  },
+  "Peanut Butter": { 
+    "weight_per_cup": 270, 
+    "category": "Spread" 
+  },
+  "Hazelnut Spread": { 
+    "weight_per_cup": 320, 
+    "category": "Spread" 
+  },
+  "Marshmallow Spread": { 
+    "weight_per_cup": 123, 
+    "category": "Spread" 
+  },
+  "Vanilla Extract": { 
+    "weight_per_cup": 224, 
+    "category": "Flavor Extract" 
+  },
+  "Almond Extract": { 
+    "weight_per_cup": 227, 
+    "category": "Flavor Extract" 
+  },
+  "Black Pepper": { 
+    "weight_per_cup": 227, 
+    "category": "Spice" 
+  },
+  "Cinnimon": { 
+    "weight_per_cup": 227, 
+    "category": "Spice" 
+  },
+  "Ginger": { 
+    "weight_per_cup": 227, 
+    "category": "Spice" 
+  },
+  "Nutmeg": { 
+    "weight_per_cup": 227, 
+    "category": "Spice" 
+  },
+  "Allspice": { 
+    "weight_per_cup": 227, 
+    "category": "Spice" 
+  },
+  "Cloves": { 
+    "weight_per_cup": 227, 
+    "category": "Spice" 
+  },
+  "Chocolate Chips": { 
+    "weight_per_cup": 227, 
+    "category": "Add-in" 
+  },
+  "Mini Chocolate Chips": { 
+    "weight_per_cup": 177, 
+    "category": "Add-in" 
+  },
+  "Cherries": { 
+    "weight_per_cup": 160, 
+    "category": "Fruit" 
+  },
+  "Blueberries": { 
+    "weight_per_cup": 170, 
+    "category": "Fruit" 
+  },
+  "Strawberries": { 
+    "weight_per_cup": 167, 
+    "category": "Fruit" 
+  },
+  "Raspberries": { 
+    "weight_per_cup": 120, 
+    "category": "Fruit" 
+  },
+  "Pineapple": { 
+    "weight_per_cup": 170, 
+    "category": "Fruit" 
+  },
+  "Peaches": { 
+    "weight_per_cup": 170, 
+    "category": "Fruit" 
+  },
+  "Pears": { 
+    "weight_per_cup": 163, 
+    "category": "Fruit" 
+  },
+  "Cranberries": { 
+    "weight_per_cup": 99, 
+    "category": "Fruit" 
+  },
+  "Mashed Bananas": { 
+    "weight_per_cup": 227, 
+    "category": "Fruit" 
+  },
+  "Raisins": { 
+    "weight_per_cup": 160, 
+    "category": "Dried Fruit" 
+  },
+  "Dried Cranberries": { 
+    "weight_per_cup": 113, 
+    "category": "Dried Fruit" 
+  },
+  "Dried Cherries": { 
+    "weight_per_cup": 142, 
+    "category": "Dried Fruit" 
+  },
+  "Dried Apricots": { 
+    "weight_per_cup": 128, 
+    "category": "Dried Fruit" 
+  },
+  "Dried Pineapple": { 
+    "weight_per_cup": 142, 
+    "category": "Dried Fruit" 
+  },
+  "Dried Blueberries": { 
+    "weight_per_cup": 156, 
+    "category": "Dried Fruit" 
+  },
+  "Walnuts": { 
+    "weight_per_cup": 113, 
+    "category": "Nut" 
+  },
+  "Pecans": { 
+    "weight_per_cup": 113, 
+    "category": "Nut" 
+  },
+  "Pistachio Nuts": { 
+    "weight_per_cup": 120, 
+    "category": "Nut" 
+  },
+  "Cashews": { 
+    "weight_per_cup": 113, 
+    "category": "Nut" 
+  },
+  "Hazelnuts": { 
+    "weight_per_cup": 142, 
+    "category": "Nut" 
+  },
+  "Macadamia Nuts": { 
+    "weight_per_cup": 149, 
+    "category": "Nut" 
+  },
+  "Pine Nuts": { 
+    "weight_per_cup": 142, 
+    "category": "Nut" 
+  },
+  "Almonds": { 
+    "weight_per_cup": 227, 
+    "category": "Nut" 
+  },
+  "Sesame Seeds": { 
+    "weight_per_cup": 142, 
+    "category": "Seed" 
+  },
+  "Poppy Seeds": { 
+    "weight_per_cup": 144, 
+    "category": "Seed" 
+  },
+  "Chia Seeds": { 
+    "weight_per_cup": 148, 
+    "category": "Seed" 
+  },
+  "Sunflower Seeds": { 
+    "weight_per_cup": 140, 
+    "category": "Seed" 
+  },
+  "Corn": { 
+    "weight_per_cup": 152, 
+    "category": "Vegetable" 
+  },
+  "Onions": { 
+    "weight_per_cup": 142, 
+    "category": "Vegetable" 
+  },
+  "Minced Garlic": { 
+    "weight_per_cup": 224, 
+    "category": "Vegetable" 
+  },
+  "Mashed Potatoes": { 
+    "weight_per_cup": 213, 
+    "category": "Vegetable" 
+  },
+  "Mashed Sweet Potatoes": { 
+    "weight_per_cup": 240, 
+    "category": "Vegetable" 
+  },
+  "Pumpkin Puree": { 
+    "weight_per_cup": 227, 
+    "category": "Vegetable" 
+  },
+  "Mashed Carrots": { 
+    "weight_per_cup": 256, 
+    "category": "Vegetable" 
+  },
+  "Tomato paste": { 
+    "weight_per_cup": 232, 
+    "category": "Vegetable" 
+  }
+}

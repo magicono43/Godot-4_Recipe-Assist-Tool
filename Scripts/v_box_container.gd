@@ -17,6 +17,9 @@ func _on_button_pressed() -> void:
 	h_box_container.clip_contents = true
 	add_child(h_box_container)
 
+	## Next try to get a small data-base going and accessible for the
+	## weight values of items entered and such, also a label for this info.
+
 	var label_1 = Label.new()
 	label_1.text = str(0)
 	label_1.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
