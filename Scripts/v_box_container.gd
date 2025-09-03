@@ -47,6 +47,12 @@ func _on_button_pressed() -> void:
 func _on_new_entry_created(newNode: Node):
 	await get_tree().process_frame
 	_update_label_numbers()
+	print(IngredientDB.volume_to_grams(IngredientDB.get_density("All Purpose Flour"), 1, "cup"))
+	print(IngredientDB.volume_to_grams(IngredientDB.get_density("All Purpose Flour"), 0.5, "cup"))
+	print(IngredientDB.volume_to_grams(IngredientDB.get_density("All Purpose Flour"), 0.25, "cup"))
+	print(IngredientDB.volume_to_grams(IngredientDB.get_density("Butter"), 1, "cup"))
+	print(IngredientDB.volume_to_grams(IngredientDB.get_density("Butter"), 0.5, "cup"))
+	print(IngredientDB.volume_to_grams(IngredientDB.get_density("Butter"), 0.25, "cup"))
 
 func _on_entry_deleted():
 	await get_tree().process_frame

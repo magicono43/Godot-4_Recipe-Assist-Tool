@@ -4,8 +4,8 @@ var ingredients = {}
 
 func _ready():
 	ingredients = load_ingredients("res://Data/Ingredients.json")
-	print(ingredients["Cake Flour"]["weight_per_cup"]) # → 120
-	print(ingredients["Butter"]["weight_per_cup"]) # → 227
+	#print(ingredients["Cake Flour"]["density"]) # → 120
+	#print(ingredients["Butter"]["density"]) # → 227
 
 func load_ingredients(path: String) -> Dictionary:
 	if not FileAccess.file_exists(path):
@@ -18,12 +18,32 @@ func load_ingredients(path: String) -> Dictionary:
 
 	return data if typeof(data) == TYPE_DICTIONARY else {}
 
-func get_weight(ingredName: String) -> int:
+func get_density(ingredName: String) -> float:
 	if ingredients.has(ingredName):
-		return ingredients[ingredName].get("weight_per_cup", 0)
+		return ingredients[ingredName].get("density", 0)
 	return 0
 
 func get_category(ingredName: String) -> String:
 	if ingredients.has(ingredName):
 		return ingredients[ingredName].get("category", "Unknown")
 	return "Unknown"
+
+# Converts any common cooking unit to weight in grams using density (g/ml)
+# density_g_ml = grams per milliliter
+# amount = numeric amount
+# unit = "ml", "tsp", "tbsp", "cup"
+func volume_to_grams(density_g_ml: float, amount: float, unit: String) -> int:
+	# All units expressed in ml
+	var unit_to_ml = {
+		"ml": 1,
+		"tsp": 5,
+		"tbsp": 15,
+		"cup": 240
+	}
+
+	if not unit_to_ml.has(unit):
+		push_error("Unsupported unit: %s" % unit)
+		return 0
+
+	var volume_ml = amount * unit_to_ml[unit]  # Convert to base ml
+	return round(density_g_ml * volume_ml)
