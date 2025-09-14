@@ -2,6 +2,14 @@ extends LineEdit
 
 signal text_changed_extended(new_text: String, source: Node)
 
+var _tag: String = ""
+
+var tag: String:
+	get:
+		return _tag
+	set(value):
+		_tag = value
+
 func _init():
 	placeholder_text = "Type Here 1"
 	alignment = HORIZONTAL_ALIGNMENT_CENTER

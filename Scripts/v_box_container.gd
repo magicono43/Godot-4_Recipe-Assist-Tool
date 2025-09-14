@@ -30,8 +30,29 @@ func _on_button_pressed() -> void:
 	h_box_container.add_child(label_1)
 
 	var custom_line_edit = preload("res://Scripts/CustomLineEdit.gd").new()
+	custom_line_edit.tag = "Item Name"
+	custom_line_edit.placeholder_text = "Item Name"
+	custom_line_edit.custom_minimum_size = Vector2(250, 35)
 	#line_edit.gui_input.connect(_on_lineedit_gui_input)
 	h_box_container.add_child(custom_line_edit)
+
+	var custom_line_edit_2 = preload("res://Scripts/CustomLineEdit.gd").new()
+	custom_line_edit_2.tag = "Number"
+	custom_line_edit_2.placeholder_text = "Amount"
+	custom_line_edit_2.custom_minimum_size = Vector2(75, 35)
+	h_box_container.add_child(custom_line_edit_2)
+
+	var custom_line_edit_3 = preload("res://Scripts/CustomLineEdit.gd").new()
+	custom_line_edit_3.tag = "Measure Type"
+	custom_line_edit_3.placeholder_text = "Measure Type"
+	custom_line_edit_3.custom_minimum_size = Vector2(125, 35)
+	h_box_container.add_child(custom_line_edit_3)
+
+	var custom_line_edit_4 = preload("res://Scripts/CustomLineEdit.gd").new()
+	custom_line_edit_4.tag = "Result"
+	custom_line_edit_4.placeholder_text = "Result"
+	custom_line_edit_4.custom_minimum_size = Vector2(75, 35)
+	h_box_container.add_child(custom_line_edit_4)
 
 	var button_1 = Button.new() # Remove Entry Button
 	button_1.text = "X"
@@ -43,16 +64,18 @@ func _on_button_pressed() -> void:
 	button_1.pressed.connect(_on_remove_pressed.bind(button_1))
 
 	emit_signal("new_entry_created", custom_line_edit)
+	emit_signal("new_entry_created", custom_line_edit_2)
+	emit_signal("new_entry_created", custom_line_edit_3)
 
 func _on_new_entry_created(newNode: Node):
 	await get_tree().process_frame
 	_update_label_numbers()
-	print(IngredientDB.volume_to_grams(IngredientDB.get_density("All Purpose Flour"), 1, "cup"))
-	print(IngredientDB.volume_to_grams(IngredientDB.get_density("All Purpose Flour"), 0.5, "cup"))
-	print(IngredientDB.volume_to_grams(IngredientDB.get_density("All Purpose Flour"), 0.25, "cup"))
-	print(IngredientDB.volume_to_grams(IngredientDB.get_density("Butter"), 1, "cup"))
-	print(IngredientDB.volume_to_grams(IngredientDB.get_density("Butter"), 0.5, "cup"))
-	print(IngredientDB.volume_to_grams(IngredientDB.get_density("Butter"), 0.25, "cup"))
+	#print(IngredientDB.volume_to_grams(IngredientDB.get_density("All Purpose Flour"), 1, "cup"))
+	#print(IngredientDB.volume_to_grams(IngredientDB.get_density("All Purpose Flour"), 0.5, "cup"))
+	#print(IngredientDB.volume_to_grams(IngredientDB.get_density("All Purpose Flour"), 0.25, "cup"))
+	#print(IngredientDB.volume_to_grams(IngredientDB.get_density("Butter"), 1, "cup"))
+	#print(IngredientDB.volume_to_grams(IngredientDB.get_density("Butter"), 0.5, "cup"))
+	#print(IngredientDB.volume_to_grams(IngredientDB.get_density("Butter"), 0.25, "cup"))
 
 func _on_entry_deleted():
 	await get_tree().process_frame
