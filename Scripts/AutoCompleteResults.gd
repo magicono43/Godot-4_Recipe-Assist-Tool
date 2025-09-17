@@ -6,10 +6,11 @@ var itemDensities: Array[float] = []
 
 func _ready() -> void:
 	var parent = get_parent()
-	parent.text_changed_extended_forwarded.connect(_on_text_changed_extended_forwarded)
+	parent.child_text_changed_forwarded.connect(_on_child_text_changed_forwarded)
+	parent.ready_to_fill_result_box_forwarded.connect(_on_ready_to_fill_result_box_forwarded)
 	itemNames = IngredientDB.get_all_ingred_names()
 
-func _on_text_changed_extended_forwarded(new_text: String, source: Node):
+func _on_child_text_changed_forwarded(new_text: String, parentNode: Node, source: Node):
 	get_parent().visible = false
 
 	for child in get_children():
@@ -17,7 +18,6 @@ func _on_text_changed_extended_forwarded(new_text: String, source: Node):
 
 	if new_text.is_empty():
 		get_parent().visible = false
-		_try_to_populate_result_box(source)
 		return
 
 	var validItems: Array[String] = []
@@ -30,8 +30,6 @@ func _on_text_changed_extended_forwarded(new_text: String, source: Node):
 	for opt in options:
 		if opt.to_lower().begins_with(new_text.to_lower()):
 			validItems.append(opt)
-
-	_try_to_populate_result_box(source)
 
 	if validItems.size() > 0:
 		for item in validItems:
@@ -60,34 +58,22 @@ func _on_search_result_pressed(button: Button) -> void:
 		return
 
 	lineEdit.text = resultName
+	lineEdit.emit_signal("text_changed_extended", resultName, lineEdit)
 	get_parent().visible = false
 	for child in get_children():
 		child.queue_free()  # schedules each child for removal
 
-	_try_to_populate_result_box(lineEdit)
-
-func _try_to_populate_result_box(source: Node) -> void:
-	var neededInfoCounter: int = 0
-	for textBox in source.get_parent().get_children():
-		if textBox is LineEdit:
-			if textBox.tag == "Result": textBox.text = ""
-			if textBox.tag == "Item Name" or textBox.tag == "Number" or textBox.tag == "Measure Type":
-				if textBox.text != "":
-					neededInfoCounter += 1
-
-	if neededInfoCounter >= 3:
-		var itemName: String = ""
-		var itemQuantity: float = 0
-		var measureType: String = ""
-		var resultBox: LineEdit = null
-		for textBox in source.get_parent().get_children():
-			if textBox is LineEdit:
-				if textBox.tag == "Result":
-					resultBox = textBox
-		for textBox in source.get_parent().get_children():
-			if textBox is LineEdit:
-				if textBox.tag == "Item Name": itemName = textBox.text
-				elif textBox.tag == "Number": itemQuantity = float(textBox.text)
-				elif textBox.tag == "Measure Type": measureType = textBox.text
+func _on_ready_to_fill_result_box_forwarded(parentNode: Node, resultBox: Node):
+	resultBox.text = ""
+	if parentNode.resultBoxReadyToFill:
+		var itemName: String = parentNode.textEntryRefs[0].text
+		var itemQuantity: float = float(parentNode.textEntryRefs[1].text)
+		var measureType: String = parentNode.textEntryRefs[2].text
 		if resultBox != null:
 			resultBox.text = str(IngredientDB.volume_to_grams(IngredientDB.get_density(itemName), itemQuantity, measureType))
+
+## Tomorrow, probably try to make it so the different text entry fields will
+## only accept certain types of text input, somehow. So like the quantity will
+## only accept valid whole numbers and float entries, while the others will
+## only accept text and such, not certain how exactly I will do this, but
+## I'm sure I'll figure it out eventually.

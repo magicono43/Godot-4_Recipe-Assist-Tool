@@ -9,13 +9,8 @@ func _ready() -> void:
 
 func _on_button_pressed() -> void:
 
-	var h_box_container = HBoxContainer.new()
-	h_box_container.alignment = BoxContainer.ALIGNMENT_CENTER
-	h_box_container.custom_minimum_size = Vector2(550, 35)
-	h_box_container.size_flags_horizontal = Control.SIZE_SHRINK_CENTER
-	h_box_container.add_theme_constant_override("separation", 10)
-	h_box_container.clip_contents = true
-	add_child(h_box_container)
+	var custom_h_box_container = preload("res://Scripts/CustomHBoxContainer.gd").new()
+	add_child(custom_h_box_container)
 
 	## Next try to get a small data-base going and accessible for the
 	## weight values of items entered and such, also a label for this info.
@@ -27,32 +22,37 @@ func _on_button_pressed() -> void:
 	label_1.custom_minimum_size = Vector2(20, 35)
 	label_1.size_flags_horizontal = Control.SIZE_SHRINK_CENTER
 	label_1.add_theme_font_size_override("font_size", 22)
-	h_box_container.add_child(label_1)
+	custom_h_box_container.add_child(label_1)
 
 	var custom_line_edit = preload("res://Scripts/CustomLineEdit.gd").new()
 	custom_line_edit.tag = "Item Name"
 	custom_line_edit.placeholder_text = "Item Name"
 	custom_line_edit.custom_minimum_size = Vector2(250, 35)
 	#line_edit.gui_input.connect(_on_lineedit_gui_input)
-	h_box_container.add_child(custom_line_edit)
+	custom_h_box_container.add_child(custom_line_edit)
+	custom_h_box_container.textEntryRefs.append(custom_line_edit)
 
 	var custom_line_edit_2 = preload("res://Scripts/CustomLineEdit.gd").new()
 	custom_line_edit_2.tag = "Number"
 	custom_line_edit_2.placeholder_text = "Amount"
 	custom_line_edit_2.custom_minimum_size = Vector2(75, 35)
-	h_box_container.add_child(custom_line_edit_2)
+	custom_h_box_container.add_child(custom_line_edit_2)
+	custom_h_box_container.textEntryRefs.append(custom_line_edit_2)
 
 	var custom_line_edit_3 = preload("res://Scripts/CustomLineEdit.gd").new()
 	custom_line_edit_3.tag = "Measure Type"
 	custom_line_edit_3.placeholder_text = "Measure Type"
 	custom_line_edit_3.custom_minimum_size = Vector2(125, 35)
-	h_box_container.add_child(custom_line_edit_3)
+	custom_h_box_container.add_child(custom_line_edit_3)
+	custom_h_box_container.textEntryRefs.append(custom_line_edit_3)
+	custom_h_box_container.sub_to_text_entry_signals()
 
 	var custom_line_edit_4 = preload("res://Scripts/CustomLineEdit.gd").new()
 	custom_line_edit_4.tag = "Result"
 	custom_line_edit_4.placeholder_text = "Result"
 	custom_line_edit_4.custom_minimum_size = Vector2(75, 35)
-	h_box_container.add_child(custom_line_edit_4)
+	custom_h_box_container.add_child(custom_line_edit_4)
+	custom_h_box_container.resultBoxRef = custom_line_edit_4
 
 	var button_1 = Button.new() # Remove Entry Button
 	button_1.text = "X"
@@ -60,12 +60,10 @@ func _on_button_pressed() -> void:
 	button_1.custom_minimum_size = Vector2(20, 35)
 	button_1.size_flags_horizontal = Control.SIZE_SHRINK_CENTER
 	button_1.add_theme_font_size_override("font_size", 22)
-	h_box_container.add_child(button_1)
+	custom_h_box_container.add_child(button_1)
 	button_1.pressed.connect(_on_remove_pressed.bind(button_1))
 
-	emit_signal("new_entry_created", custom_line_edit)
-	emit_signal("new_entry_created", custom_line_edit_2)
-	emit_signal("new_entry_created", custom_line_edit_3)
+	emit_signal("new_entry_created", custom_h_box_container)
 
 func _on_new_entry_created(newNode: Node):
 	await get_tree().process_frame
