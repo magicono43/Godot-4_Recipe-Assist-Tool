@@ -71,9 +71,3 @@ func _on_ready_to_fill_result_box_forwarded(parentNode: Node, resultBox: Node):
 		var measureType: String = parentNode.textEntryRefs[2].text
 		if resultBox != null:
 			resultBox.text = str(IngredientDB.volume_to_grams(IngredientDB.get_density(itemName), itemQuantity, measureType))
-
-## Tomorrow, probably try to make it so the different text entry fields will
-## only accept certain types of text input, somehow. So like the quantity will
-## only accept valid whole numbers and float entries, while the others will
-## only accept text and such, not certain how exactly I will do this, but
-## I'm sure I'll figure it out eventually.

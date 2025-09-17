@@ -12,9 +12,6 @@ func _on_button_pressed() -> void:
 	var custom_h_box_container = preload("res://Scripts/CustomHBoxContainer.gd").new()
 	add_child(custom_h_box_container)
 
-	## Next try to get a small data-base going and accessible for the
-	## weight values of items entered and such, also a label for this info.
-
 	var label_1 = Label.new()
 	label_1.text = str(0)
 	label_1.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
@@ -28,6 +25,7 @@ func _on_button_pressed() -> void:
 	custom_line_edit.tag = "Item Name"
 	custom_line_edit.placeholder_text = "Item Name"
 	custom_line_edit.custom_minimum_size = Vector2(250, 35)
+	custom_line_edit.set_allow_regex("^[A-Za-z]*$")
 	#line_edit.gui_input.connect(_on_lineedit_gui_input)
 	custom_h_box_container.add_child(custom_line_edit)
 	custom_h_box_container.textEntryRefs.append(custom_line_edit)
@@ -36,6 +34,7 @@ func _on_button_pressed() -> void:
 	custom_line_edit_2.tag = "Number"
 	custom_line_edit_2.placeholder_text = "Amount"
 	custom_line_edit_2.custom_minimum_size = Vector2(75, 35)
+	custom_line_edit_2.set_allow_regex("^[0-9]*\\.?[0-9]*$")
 	custom_h_box_container.add_child(custom_line_edit_2)
 	custom_h_box_container.textEntryRefs.append(custom_line_edit_2)
 
@@ -43,6 +42,7 @@ func _on_button_pressed() -> void:
 	custom_line_edit_3.tag = "Measure Type"
 	custom_line_edit_3.placeholder_text = "Measure Type"
 	custom_line_edit_3.custom_minimum_size = Vector2(125, 35)
+	custom_line_edit_3.set_allow_regex("^[A-Za-z]*$")
 	custom_h_box_container.add_child(custom_line_edit_3)
 	custom_h_box_container.textEntryRefs.append(custom_line_edit_3)
 	custom_h_box_container.sub_to_text_entry_signals()
@@ -51,6 +51,7 @@ func _on_button_pressed() -> void:
 	custom_line_edit_4.tag = "Result"
 	custom_line_edit_4.placeholder_text = "Result"
 	custom_line_edit_4.custom_minimum_size = Vector2(75, 35)
+	custom_line_edit_4.set_allow_regex("^[0-9]*$")
 	custom_h_box_container.add_child(custom_line_edit_4)
 	custom_h_box_container.resultBoxRef = custom_line_edit_4
 
