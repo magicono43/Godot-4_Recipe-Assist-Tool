@@ -37,22 +37,6 @@ func _on_text_changed(new_text: String):
 	_last_valid_text = new_text
 	emit_signal("text_changed_extended", new_text, self)
 
-## Tomorrow, maybe see if I can have a little popup show up when trying to enter
-## invalid characters into a specific text-entry field, just to give some
-## indication what is intended to go there, not a big deal though for that
-## it would be primarily polish at that point.
-##
-## If I don't decide to work on that, then maybe see if I can get like a list
-## of "alternate names" for various ingredients in my data-base. So like
-## if you happen to call powdered sugar, confectioners sugar. Or
-## All Purpose Flour, White Flour, or just Flour or something, then the
-## auto-complete and data-base would account for that and still hopefully
-## give you the result you were looking for or something like that.
-## And maybe even something similar to how Interkarma did the location
-## searching on the world-map UI for Daggerfall Unity, where entering
-## in text gives you the "closest match" sort of thing, instead of having
-## to be exact from start to finish, will see.
-
 func set_allow_regex(pattern: String):
 	allow_regex = RegEx.new()
 	var err = allow_regex.compile(pattern)

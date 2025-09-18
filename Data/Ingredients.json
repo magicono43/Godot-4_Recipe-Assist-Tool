@@ -1,422 +1,532 @@
 {
   "Cake Flour": { 
 	"density": 0.5, 
-	"category": "Dry" 
+	"category": "Dry", 
+	"aliases": ["Soft Wheat Flour", "Pastry Flour", "Superfine Flour", "Extra Fine Flour", "Low Protein Flour"] 
+  },
+  "Self Rising Flour": { 
+	"density": 0.5, 
+	"category": "Dry", 
+	"aliases": ["SR Flour", "Self Raising Flour", "Pre Leavened Flour"] 
   },
   "All Purpose Flour": { 
     "density": 0.5, 
-    "category": "Dry" 
+    "category": "Dry", 
+	"aliases": ["Flour", "AP Flour", "White Flour", "Plain Flour", "General Purpose Flour", "Wheat Flour", "Baking Flour", "Multipurpose Flour"] 
   },
   "Bread Flour": { 
 	"density": 0.5, 
-	"category": "Dry" 
+	"category": "Dry", 
+	"aliases": ["Strong Flour", "High Protein Flour", "Hard Wheat Flour", "Manitoba Flour"] 
   },
   "Semolina Flour": { 
 	"density": 0.679, 
-	"category": "Dry" 
+	"category": "Dry", 
+	"aliases": ["Durum Flour", "Semolina", "Coarse Wheat Flour", "Pasta Flour"] 
   },
   "Almond Flour": { 
 	"density": 0.833, 
-	"category": "Dry" 
+	"category": "Dry", 
+	"aliases": ["Ground Almonds", "Blanched Almond Flour", "Almond Meal", "Almond Powder"] 
   },
   "Cornmeal": { 
     "density": 0.6, 
-    "category": "Dry" 
+    "category": "Dry", 
+	"aliases": ["Maize Meal", "Ground Corn", "Polenta", "Corn Grits"] 
   },
   "Oats": { 
     "density": 0.371, 
-    "category": "Dry" 
+    "category": "Dry", 
+	"aliases": ["Rolled Oats", "Old Fashioned Oats", "Quick Oats", "Instant Oats", "Oat Groats", "Steel Cut Oats"] 
   },
   "Graham Cracker Crumbs": { 
     "density": 0.417, 
-    "category": "Dry" 
+    "category": "Dry", 
+	"aliases": ["Graham Cracker Powder", "Crushed Graham Crackers"] 
   },
   "Yeast": { 
     "density": 0.6, 
-    "category": "Dry" 
+    "category": "Dry", 
+	"aliases": ["Active Dry Yeast", "Instant Yeast", "Rapid Rise Yeast", "Bread Yeast", "Dry Yeast"] 
   },
   "Corn Starch": { 
     "density": 0.467, 
-    "category": "Dry" 
+    "category": "Dry", 
+	"aliases": ["Corn Flour", "Maize Starch", "Cornflour"] 
   },
   "Baking Powder": { 
     "density": 0.8, 
-    "category": "Dry" 
+    "category": "Dry", 
+	"aliases": ["Leavening Powder", "Double Acting Baking Powder", "Single Acting Baking Powder"] 
   },
   "Baking Soda": { 
     "density": 1.2, 
-    "category": "Dry" 
+    "category": "Dry", 
+	"aliases": ["Sodium Bicarbonate", "Bicarbonate of Soda", "Bicarb Soda"] 
   },
   "Cream of Tartar": { 
     "density": 0.833, 
-    "category": "Dry" 
+    "category": "Dry", 
+	"aliases": ["Potassium Bitartrate", "Tartaric Acid", "Wine Cream"] 
   },
   "Salt": { 
     "density": 1.2, 
-    "category": "Dry" 
+    "category": "Dry", 
+	"aliases": ["Table Salt", "Sea Salt", "Kosher Salt", "Rock Salt", "Fine Salt", "Coarse Salt"] 
   },
   "Cocoa Powder": { 
     "density": 0.354, 
-    "category": "Dry" 
+    "category": "Dry", 
+	"aliases": ["Unsweetened Cocoa", "Natural Cocoa Powder", "Dutch Process Cocoa", "Alkalized Cocoa"] 
   },
   "Demerara Sugar": { 
     "density": 0.917, 
-    "category": "Dry" 
+    "category": "Dry", 
+	"aliases": ["Light Raw Sugar", "Coarse Sugar", "Topping Sugar"] 
   },
   "Turbinado Sugar": { 
     "density": 0.75, 
-    "category": "Dry" 
+    "category": "Dry", 
+	"aliases": ["Raw Sugar", "Dark Raw Sugar", "Sugar in the Raw"] 
   },
   "Granulated Sugar": { 
     "density": 0.825, 
-    "category": "Dry" 
+    "category": "Dry", 
+	"aliases": ["White Sugar", "Table Sugar", "Cane Sugar", "Refined Sugar"] 
   },
   "Powdered Sugar": { 
     "density": 0.471, 
-    "category": "Dry" 
+    "category": "Dry", 
+	"aliases": ["Confectioners Sugar", "Icing Sugar", "Caster Sugar", "Superfine Sugar"] 
   },
   "Light Brown Sugar": { 
     "density": 0.888, 
-    "category": "Dry" 
+    "category": "Dry", 
+	"aliases": ["Soft Brown Sugar", "Golden Brown Sugar", "Light Muscovado Sugar", "Sugar with Molasses"] 
   },
   "Dark Brown Sugar": { 
     "density": 0.888, 
-    "category": "Dry" 
+    "category": "Dry", 
+	"aliases": ["Soft Dark Brown Sugar", "Dark Muscovado Sugar", "Molasses Sugar", "Brown Sugar with Molasses"] 
   },
   "Water": { 
     "density": 0.946, 
-    "category": "Wet" 
+    "category": "Wet", 
+	"aliases": ["H2O", "Drinking Water", "Filtered Water", "Tap Water", "Spring Water"] 
   },
   "Lemon Juice": { 
     "density": 0.933, 
-    "category": "Acid" 
+    "category": "Acid", 
+	"aliases": [] 
   },
   "Lime Juice": { 
     "density": 0.933, 
-    "category": "Acid" 
+    "category": "Acid", 
+	"aliases": [] 
   },
   "White Vinegar": { 
     "density": 0.946, 
-    "category": "Acid" 
+    "category": "Acid", 
+	"aliases": ["Distilled Vinegar", "Spirit Vinegar", "Table Vinegar", "Clear Vinegar"] 
   },
   "Grated Cheddar Cheese": { 
     "density": 0.471, 
-    "category": "Dairy" 
+    "category": "Dairy", 
+	"aliases": ["Shredded Cheddar Cheese", "Cheddar Shreds", "Cheddar", "Cheddar Cheese"] 
   },
   "Grated Mozzarella Cheese": { 
     "density": 0.471, 
-    "category": "Dairy" 
+    "category": "Dairy", 
+	"aliases": ["Shredded Mozzarella Cheese", "Mozzarella Shreds", "Mozzarella", "Mozzarella Cheese"] 
   },
   "Grated Parmesan Cheese": { 
     "density": 0.417, 
-    "category": "Dairy" 
+    "category": "Dairy", 
+	"aliases": ["Shredded Parmesan Cheese", "Parmesan Shreds", "Parmigiano Reggiano", "Parmesan"] 
   },
   "Feta Cheese": { 
     "density": 0.471, 
-    "category": "Dairy" 
+    "category": "Dairy", 
+	"aliases": ["Greek Feta", "Sheep Milk Feta", "Goat Milk Feta", "Crumbled Feta"] 
   },
   "Cottage Cheese": { 
     "density": 0.946, 
-    "category": "Dairy" 
+    "category": "Dairy", 
+	"aliases": ["Curd Cheese", "Paneer Curd"] 
   },
   "Ricotta Cheese": { 
     "density": 0.946, 
-    "category": "Dairy" 
+    "category": "Dairy", 
+	"aliases": ["Italian Ricotta", "Ricotta"] 
   },
   "Cream Cheese": { 
     "density": 0.946, 
-    "category": "Dairy" 
+    "category": "Dairy", 
+	"aliases": ["Soft Cheese", "Spreadable Cheese", "Philadelphia Cheese"] 
   },
   "Sweetened Condensed Milk": { 
     "density": 1.3, 
-    "category": "Dairy" 
+    "category": "Dairy", 
+	"aliases": ["Condensed Milk", "Sweetened Milk", "Milk with Sugar", "Evaporated Sweetened Milk"] 
   },
   "Sour Cream": { 
     "density": 0.946, 
-    "category": "Dairy" 
+    "category": "Dairy", 
+	"aliases": ["Cultured Cream", "Acidified Cream"] 
   },
   "Greek Yogurt": { 
     "density": 0.946, 
-    "category": "Dairy" 
+    "category": "Dairy", 
+	"aliases": ["Strained Yogurt", "Thick Yogurt", "Greek-Style Yogurt", "Labneh"] 
   },
   "Yogurt": { 
     "density": 0.946, 
-    "category": "Dairy" 
+    "category": "Dairy", 
+	"aliases": ["Plain Yogurt", "Natural Yogurt", "Cultured Yogurt", "Regular Yogurt"] 
   },
   "Heavy Whipping Cream": { 
     "density": 0.946, 
-    "category": "Dairy" 
+    "category": "Dairy", 
+	"aliases": ["Heavy Cream", "Whipping Cream", "Double Cream", "Full-Fat Cream"] 
   },
   "Buttermilk": { 
     "density": 0.946, 
-    "category": "Dairy" 
+    "category": "Dairy", 
+	"aliases": ["Cultured Buttermilk", "Soured Milk"] 
   },
   "Half And Half": { 
     "density": 0.946, 
-    "category": "Dairy" 
+    "category": "Dairy", 
+	"aliases": ["Half & Half", "Light Cream", "Coffee Cream", "Creamer"] 
   },
   "Whole Milk": { 
     "density": 0.946, 
-    "category": "Dairy" 
+    "category": "Dairy", 
+	"aliases": ["Milk", "Full Fat Milk", "Full Cream Milk"] 
   },
   "Applesauce": { 
     "density": 1.063, 
-    "category": "Wet" 
+    "category": "Wet", 
+	"aliases": ["Apple Puree", "Unsweetened Applesauce", "Sweetened Applesauce", "Apple Sauce"] 
   },
   "Molasses": { 
     "density": 1.417, 
-    "category": "Wet" 
+    "category": "Wet", 
+	"aliases": ["Blackstrap Molasses", "Light Molasses", "Dark Molasses", "Sugarcane Syrup"] 
   },
   "Honey": { 
     "density": 1.4, 
-    "category": "Wet" 
+    "category": "Wet", 
+	"aliases": [] 
   },
   "Corn Syrup": { 
     "density": 1.3, 
-    "category": "Wet" 
+    "category": "Wet", 
+	"aliases": ["Light Corn Syrup", "Dark Corn Syrup", "Glucose Syrup", "Maize Syrup"] 
   },
   "Agave Syrup": { 
     "density": 1.4, 
-    "category": "Wet" 
+    "category": "Wet", 
+	"aliases": ["Agave Nectar", "Blue Agave Syrup", "Agave Sweetener", "Agave Juice"] 
   },
   "Egg": { 
     "density": 0.208, 
-    "category": "Wet" 
+    "category": "Wet", 
+	"aliases": ["Chicken Egg", "Large Egg"] 
   },
   "Egg Yolk": { 
     "density": 0.063, 
-    "category": "Wet" 
+    "category": "Wet", 
+	"aliases": ["Yolk", "Chicken Egg Yolk"] 
   },
   "Egg White": { 
     "density": 0.146, 
-    "category": "Wet" 
+    "category": "Wet", 
+	"aliases": ["White", "Albumen", "Chicken Egg White"] 
   },
   "Meringue Powder": { 
     "density": 0.717, 
-    "category": "Powder" 
+    "category": "Powder", 
+	"aliases": ["Powdered Egg Whites", "Egg White Powder", "Meringue Mix", "Dry Egg Whites"] 
   },
   "Coconut": { 
     "density": 0.354, 
-    "category": "Fat" 
+    "category": "Fat", 
+	"aliases": ["Shredded Coconut", "Desiccated Coconut", "Coconut Flakes", "Unsweetened Coconut"] 
   },
   "Almond Paste": { 
     "density": 0.946, 
-    "category": "Fat" 
+    "category": "Fat", 
+	"aliases": ["Marzipan Paste", "Almond Dough", "Almond Filling", "Sweet Almond Paste"] 
   },
   "Butter": { 
     "density": 0.946, 
-    "category": "Fat" 
+    "category": "Fat", 
+	"aliases": ["Unsalted Butter", "Salted Butter", "Margarine"] 
   },
   "Vegetable Shortening": { 
     "density": 0.767, 
-    "category": "Fat" 
+    "category": "Fat", 
+	"aliases": ["Shortening", "Crisco", "Vegetable Fat", "Baking Shortening"] 
   },
   "Ghee": { 
     "density": 0.733, 
-    "category": "Fat" 
+    "category": "Fat", 
+	"aliases": ["Clarified Butter", "Indian Butter", "Cooked Butter", "Butterfat"] 
   },
   "Mayonnaise": { 
     "density": 0.942, 
-    "category": "Fat" 
+    "category": "Fat", 
+	"aliases": ["Mayo", "Egg Yolk Dressing", "Sandwich Spread", "Aioli"] 
   },
   "Olive Oil": { 
     "density": 0.833, 
-    "category": "Fat" 
+    "category": "Fat", 
+	"aliases": ["Extra Virgin Olive Oil", "EVOO", "Virgin Olive Oil"] 
   },
   "Vegetable Oil": { 
     "density": 0.825, 
-    "category": "Fat" 
+    "category": "Fat", 
+	"aliases": ["Canola Oil", "Sunflower Oil", "Soybean Oil", "Neutral Oil"] 
   },
   "Peanut Butter": { 
     "density": 1.125, 
-    "category": "Spread" 
+    "category": "Spread", 
+	"aliases": ["PB", "Smooth Peanut Butter", "Ground Peanuts"] 
   },
   "Hazelnut Spread": { 
     "density": 1.333, 
-    "category": "Spread" 
+    "category": "Spread", 
+	"aliases": ["Chocolate Hazelnut Spread", "Nutella", "Hazelnut Cocoa Spread", "Nut Spread"] 
   },
   "Marshmallow Spread": { 
     "density": 0.513, 
-    "category": "Spread" 
+    "category": "Spread", 
+	"aliases": ["Fluff", "Marshmallow Creme", "Marshmallow Cream"] 
   },
   "Vanilla Extract": { 
     "density": 0.933, 
-    "category": "Flavor Extract" 
+    "category": "Flavor Extract", 
+	"aliases": ["Pure Vanilla Extract", "Vanilla Essence", "Imitation Vanilla", "Vanilla Flavoring"] 
   },
   "Almond Extract": { 
     "density": 0.946, 
-    "category": "Flavor Extract" 
+    "category": "Flavor Extract", 
+	"aliases": ["Pure Almond Extract", "Imitation Almond Extract", "Almond Flavoring", "Artificial Almond Extract"] 
   },
   "Black Pepper": { 
     "density": 0.946, 
-    "category": "Spice" 
+    "category": "Spice", 
+	"aliases": ["Ground Black Pepper", "Cracked Pepper", "Freshly Ground Pepper"] 
   },
   "Cinnimon": { 
     "density": 0.946, 
-    "category": "Spice" 
+    "category": "Spice", 
+	"aliases": ["Ground Cinnamon"] 
   },
   "Ginger": { 
     "density": 0.946, 
-    "category": "Spice" 
+    "category": "Spice", 
+	"aliases": ["Ground Ginger", "Ginger Powder"] 
   },
   "Nutmeg": { 
     "density": 0.946, 
-    "category": "Spice" 
+    "category": "Spice", 
+	"aliases": ["Ground Nutmeg"] 
   },
   "Allspice": { 
     "density": 0.946, 
-    "category": "Spice" 
+    "category": "Spice", 
+	"aliases": ["Ground Allspice", "Pimento", "Jamaica Pepper"] 
   },
   "Cloves": { 
     "density": 0.946, 
-    "category": "Spice" 
+    "category": "Spice", 
+	"aliases": ["Ground Cloves", "Clove Powder"] 
   },
   "Chocolate Chips": { 
     "density": 0.946, 
-    "category": "Add-in" 
+    "category": "Add-in", 
+	"aliases": ["Baking Chocolate Chips", "Semi-Sweet Chocolate Chips", "Milk Chocolate Chips", "Choco Chips"] 
   },
   "Mini Chocolate Chips": { 
     "density": 0.738, 
-    "category": "Add-in" 
+    "category": "Add-in", 
+	"aliases": ["Mini Choco Chips", "Mini Semi-Sweet Chips", "Mini Milk Chocolate Chips", "Tiny Chocolate Chips"] 
   },
   "Cherries": { 
     "density": 0.667, 
-    "category": "Fruit" 
+    "category": "Fruit", 
+	"aliases": ["Fresh Cherries", "Maraschino Cherries", "Whole Cherries"] 
   },
   "Blueberries": { 
     "density": 0.708, 
-    "category": "Fruit" 
+    "category": "Fruit", 
+	"aliases": ["Fresh Blueberries", "Frozen Blueberries", "Whole Blueberries", "Bilberries"] 
   },
   "Strawberries": { 
     "density": 0.696, 
-    "category": "Fruit" 
+    "category": "Fruit", 
+	"aliases": ["Fresh Strawberries", "Frozen Strawberries", "Whole Strawberries"] 
   },
   "Raspberries": { 
     "density": 0.50, 
-    "category": "Fruit" 
+    "category": "Fruit", 
+	"aliases": ["Fresh Raspberries", "Frozen Raspberries", "Red Raspberries", "Black Raspberries", "Whole Raspberries"] 
   },
   "Pineapple": { 
     "density": 0.708, 
-    "category": "Fruit" 
+    "category": "Fruit", 
+	"aliases": ["Fresh Pineapple", "Canned Pineapple"] 
   },
   "Peaches": { 
     "density": 0.708, 
-    "category": "Fruit" 
+    "category": "Fruit", 
+	"aliases": ["Fresh Peaches", "Canned Peaches"] 
   },
   "Pears": { 
     "density": 0.679, 
-    "category": "Fruit" 
+    "category": "Fruit", 
+	"aliases": ["Fresh Pears", "Canned Pears"] 
   },
   "Cranberries": { 
     "density": 0.413, 
-    "category": "Fruit" 
+    "category": "Fruit", 
+	"aliases": ["Fresh Cranberries", "Whole Cranberries"] 
   },
   "Mashed Bananas": { 
     "density": 0.946, 
-    "category": "Fruit" 
+    "category": "Fruit", 
+	"aliases": ["Banana Puree"] 
   },
   "Raisins": { 
     "density": 0.667, 
-    "category": "Dried Fruit" 
+    "category": "Dried Fruit", 
+	"aliases": ["Dried Grapes"] 
   },
   "Dried Cranberries": { 
     "density": 0.471, 
-    "category": "Dried Fruit" 
+    "category": "Dried Fruit", 
+	"aliases": ["Craisins"] 
   },
   "Dried Cherries": { 
     "density": 0.592, 
-    "category": "Dried Fruit" 
+    "category": "Dried Fruit", 
+	"aliases": [] 
   },
   "Dried Apricots": { 
     "density": 0.533, 
-    "category": "Dried Fruit" 
+    "category": "Dried Fruit", 
+	"aliases": [] 
   },
   "Dried Pineapple": { 
     "density": 0.592, 
-    "category": "Dried Fruit" 
+    "category": "Dried Fruit", 
+	"aliases": ["Candied Pineapple"] 
   },
   "Dried Blueberries": { 
     "density": 0.65, 
-    "category": "Dried Fruit" 
+    "category": "Dried Fruit", 
+	"aliases": [] 
   },
   "Walnuts": { 
     "density": 0.471, 
-    "category": "Nut" 
+    "category": "Nut", 
+	"aliases": [] 
   },
   "Pecans": { 
     "density": 0.471, 
-    "category": "Nut" 
+    "category": "Nut", 
+	"aliases": [] 
   },
   "Pistachio Nuts": { 
     "density": 0.50, 
-    "category": "Nut" 
+    "category": "Nut", 
+	"aliases": ["Pistachio"] 
   },
   "Cashews": { 
     "density": 0.471, 
-    "category": "Nut" 
+    "category": "Nut", 
+	"aliases": [] 
   },
   "Hazelnuts": { 
     "density": 0.592, 
-    "category": "Nut" 
+    "category": "Nut", 
+	"aliases": [] 
   },
   "Macadamia Nuts": { 
     "density": 0.621, 
-    "category": "Nut" 
+    "category": "Nut", 
+	"aliases": [] 
   },
   "Pine Nuts": { 
     "density": 0.592, 
-    "category": "Nut" 
+    "category": "Nut", 
+	"aliases": [] 
   },
   "Almonds": { 
     "density": 0.946, 
-    "category": "Nut" 
+    "category": "Nut", 
+	"aliases": [] 
   },
   "Sesame Seeds": { 
     "density": 0.592, 
-    "category": "Seed" 
+    "category": "Seed", 
+	"aliases": [] 
   },
   "Poppy Seeds": { 
     "density": 0.6, 
-    "category": "Seed" 
+    "category": "Seed", 
+	"aliases": [] 
   },
   "Chia Seeds": { 
     "density": 0.617, 
-    "category": "Seed" 
+    "category": "Seed", 
+	"aliases": [] 
   },
   "Sunflower Seeds": { 
     "density": 0.583, 
-    "category": "Seed" 
+    "category": "Seed", 
+	"aliases": [] 
   },
   "Corn": { 
     "density": 0.633, 
-    "category": "Vegetable" 
+    "category": "Vegetable", 
+	"aliases": ["Maize"] 
   },
   "Onions": { 
     "density": 0.592, 
-    "category": "Vegetable" 
+    "category": "Vegetable", 
+	"aliases": [] 
   },
   "Minced Garlic": { 
     "density": 0.933, 
-    "category": "Vegetable" 
+    "category": "Vegetable", 
+	"aliases": ["Garlic"] 
   },
   "Mashed Potatoes": { 
     "density": 0.888, 
-    "category": "Vegetable" 
+    "category": "Vegetable", 
+	"aliases": [] 
   },
   "Mashed Sweet Potatoes": { 
     "density": 1.0, 
-    "category": "Vegetable" 
+    "category": "Vegetable", 
+	"aliases": [] 
   },
   "Pumpkin Puree": { 
     "density": 0.946, 
-    "category": "Vegetable" 
+    "category": "Vegetable", 
+	"aliases": ["Mashed Pumpkin"] 
   },
   "Mashed Carrots": { 
     "density": 1.067, 
-    "category": "Vegetable" 
+    "category": "Vegetable", 
+	"aliases": [] 
   },
   "Tomato paste": { 
     "density": 0.967, 
-    "category": "Vegetable" 
+    "category": "Vegetable", 
+	"aliases": [] 
   }
 }
