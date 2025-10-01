@@ -55,6 +55,35 @@ func _on_button_pressed() -> void:
 	custom_h_box_container.add_child(custom_line_edit_4)
 	custom_h_box_container.resultBoxRef = custom_line_edit_4
 
+	var arrow_buttons_container = VBoxContainer.new()
+	arrow_buttons_container.custom_minimum_size = Vector2(20, 35)
+	arrow_buttons_container.size_flags_horizontal = Control.SIZE_SHRINK_CENTER
+	arrow_buttons_container.add_theme_constant_override("separation", 3)
+	arrow_buttons_container.clip_contents = true
+	custom_h_box_container.add_child(arrow_buttons_container)
+	var move_up_button = TextureButton.new()
+	move_up_button.texture_normal = load("res://Textures/Up_Arrow_Normal.png")
+	move_up_button.texture_hover = load("res://Textures/Up_Arrow_Hover.png")
+	move_up_button.texture_pressed = load("res://Textures/Up_Arrow_Pressed.png")
+	move_up_button.custom_minimum_size = Vector2(20, 16)
+	move_up_button.stretch_mode = TextureButton.STRETCH_KEEP
+	arrow_buttons_container.add_child(move_up_button)
+	## Connect Up Button Signal
+	var move_down_button = TextureButton.new()
+	move_down_button.texture_normal = load("res://Textures/Down_Arrow_Normal.png")
+	move_down_button.texture_hover = load("res://Textures/Down_Arrow_Hover.png")
+	move_down_button.texture_pressed = load("res://Textures/Down_Arrow_Pressed.png")
+	move_down_button.custom_minimum_size = Vector2(20, 16)
+	move_down_button.stretch_mode = TextureButton.STRETCH_KEEP
+	arrow_buttons_container.add_child(move_down_button)
+	## Connect Up Button Signal
+
+	## Add an up and down arrow button here, somehow. Maybe even
+	## use another V-Box Container node to have 2 buttons, one
+	## for the up arrow and one for the down. When either of those
+	## are clicked, move the children up or down in the main
+	## V-Box container parent, or something like that.
+
 	var button_1 = Button.new() # Remove Entry Button
 	button_1.text = "X"
 	button_1.name = "RemoveButton"

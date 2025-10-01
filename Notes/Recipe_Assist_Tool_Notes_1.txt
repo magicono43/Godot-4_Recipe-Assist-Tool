@@ -22,3 +22,11 @@ would give options for items that are similar to that term and such
 more work obviously, but could work fairly well potentially.
 ###
 
+9/18/2025:
+###
+I'll have to think of what feature or thing to work on next in this tool. I have the stuff above this note, but I don't think those are really necessary to get this 
+to function, so I think many of the things up there would be mostly in the later "polish" category, if I ever get to that phase. So I need to think of other more 
+necessary features to work on next. Possibly some optional multiplier for the entire current list of ingredients, such as 2x, 0.5x, etc. 
+
+Maybe after that, or before, depends, I can try to make it so you can change the order of ingredients on the list with some arrow buttons or something. 
+###
