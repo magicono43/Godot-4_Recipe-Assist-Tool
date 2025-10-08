@@ -68,7 +68,7 @@ func _on_button_pressed() -> void:
 	move_up_button.custom_minimum_size = Vector2(20, 16)
 	move_up_button.stretch_mode = TextureButton.STRETCH_KEEP
 	arrow_buttons_container.add_child(move_up_button)
-	## Connect Up Button Signal
+	move_up_button.pressed.connect(_on_change_order_pressed.bind(move_up_button, true))
 	var move_down_button = TextureButton.new()
 	move_down_button.texture_normal = load("res://Textures/Down_Arrow_Normal.png")
 	move_down_button.texture_hover = load("res://Textures/Down_Arrow_Hover.png")
@@ -76,7 +76,7 @@ func _on_button_pressed() -> void:
 	move_down_button.custom_minimum_size = Vector2(20, 16)
 	move_down_button.stretch_mode = TextureButton.STRETCH_KEEP
 	arrow_buttons_container.add_child(move_down_button)
-	## Connect Up Button Signal
+	move_down_button.pressed.connect(_on_change_order_pressed.bind(move_down_button, false))
 
 	## Add an up and down arrow button here, somehow. Maybe even
 	## use another V-Box Container node to have 2 buttons, one
@@ -98,12 +98,6 @@ func _on_button_pressed() -> void:
 func _on_new_entry_created(newNode: Node):
 	await get_tree().process_frame
 	_update_label_numbers()
-	#print(IngredientDB.volume_to_grams(IngredientDB.get_density("All Purpose Flour"), 1, "cup"))
-	#print(IngredientDB.volume_to_grams(IngredientDB.get_density("All Purpose Flour"), 0.5, "cup"))
-	#print(IngredientDB.volume_to_grams(IngredientDB.get_density("All Purpose Flour"), 0.25, "cup"))
-	#print(IngredientDB.volume_to_grams(IngredientDB.get_density("Butter"), 1, "cup"))
-	#print(IngredientDB.volume_to_grams(IngredientDB.get_density("Butter"), 0.5, "cup"))
-	#print(IngredientDB.volume_to_grams(IngredientDB.get_density("Butter"), 0.25, "cup"))
 
 func _on_entry_deleted():
 	await get_tree().process_frame
@@ -116,48 +110,26 @@ func _update_label_numbers():
 			entryNumber += 1
 			entry.get_child(0).text = str(entryNumber)
 
+func _on_change_order_pressed(button: TextureButton, upOrDown: bool) -> void:
+	var totalEntries: int = 0
+	var currentEntryNum: int = 0
+	for entry in get_children():
+		if entry is HBoxContainer:
+			totalEntries += 1
+			if button.get_parent().get_parent() == entry:
+				currentEntryNum = totalEntries
+	if totalEntries <= 1: return
+	if upOrDown: if currentEntryNum == 1: return
+	if !upOrDown: if currentEntryNum == totalEntries: return
+
+	var childEntry: Node = button.get_parent().get_parent()
+	if upOrDown: move_child(childEntry, currentEntryNum - 2)
+	else: move_child(childEntry, currentEntryNum)
+
+	await get_tree().process_frame
+	_update_label_numbers()
+	emit_signal("entry_deleted") # Just to hide auto-complete box if visible.
+
 func _on_remove_pressed(button: Button) -> void:
 	button.get_parent().queue_free()
 	emit_signal("entry_deleted")
-
-#func _on_text_changed(new_text: String):
-	#_update_results(new_text)
-#
-#
-#func _update_results(query: String):
-	#for child in results_container.get_children():
-		#child.queue_free()
-#
-	#if query == "":
-		#dropdown.visible = false
-		#return
-#
-	#var matches = items.filter(func(item): return query.to_lower() in item.to_lower())
-#
-	#if matches.size() == 0:
-		#dropdown.visible = false
-		#return
-#
-	## Build result list
-	#for match in matches:
-		#var btn = Button.new()
-		#btn.text = match
-		#btn.focus_mode = Control.FOCUS_NONE  # don't steal LineEdit focus
-		#btn.pressed.connect(func(): _on_result_pressed(match))
-		#results_container.add_child(btn)
-#
-	#dropdown.visible = true
-#
-#
-#func _on_result_pressed(match: String):
-	#line_edit.text = match
-	#dropdown.visible = false
-#
-#
-#func _on_lineedit_gui_input(event):
-	## Hide dropdown if Esc is pressed
-	#if event is InputEventKey and event.pressed and event.keycode == KEY_ESCAPE:
-		#dropdown.visible = false
-#
-	#var search_2 = SearchBox2.new()
-	#h_box_container.add_child(search_2)
