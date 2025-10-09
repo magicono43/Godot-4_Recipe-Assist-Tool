@@ -4,11 +4,15 @@ var itemNames: Array[String] = []
 var measureTypes: Array[String] = ["Milliliters", "Teaspoons", "Tablespoons", "Cups"]
 var itemDensities: Array[float] = []
 
+var multiplierNode: LineEdit = null
+
 func _ready() -> void:
 	var parent = get_parent()
 	parent.child_text_changed_forwarded.connect(_on_child_text_changed_forwarded)
 	parent.ready_to_fill_result_box_forwarded.connect(_on_ready_to_fill_result_box_forwarded)
 	itemNames = IngredientDB.get_all_ingred_names()
+	multiplierNode = get_node("../../LineEdit")
+	multiplierNode.text_changed_extended.connect(_on_multiplier_text_changed_forwarded)
 
 func _on_child_text_changed_forwarded(new_text: String, parentNode: Node, source: Node):
 	get_parent().visible = false
@@ -70,4 +74,15 @@ func _on_ready_to_fill_result_box_forwarded(parentNode: Node, resultBox: Node):
 		var itemQuantity: float = float(parentNode.textEntryRefs[1].text)
 		var measureType: String = parentNode.textEntryRefs[2].text
 		if resultBox != null:
-			resultBox.text = str(IngredientDB.volume_to_grams(IngredientDB.get_density(itemName), itemQuantity, measureType))
+			var multiValue: float = 1.0
+			if multiplierNode.text != "": multiValue = float(multiplierNode.text)
+			var baseValue: float = float(str(IngredientDB.volume_to_grams(IngredientDB.get_density(itemName), itemQuantity, measureType)))
+			resultBox.text = str(baseValue * multiValue)
+
+func _on_multiplier_text_changed_forwarded(new_text: String, multiNode: LineEdit):
+	## Work on this next time, basically have all the "results" boxes
+	## get updated based on the current value of the multiplier LineEdit Node
+	## I will likely have to loop through all of those current ingredient
+	## entries that have the "resultBoxReadyToFill" as true, then update
+	## their result boxes based on that, or something.
+	pass

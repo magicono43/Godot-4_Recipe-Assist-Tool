@@ -78,12 +78,6 @@ func _on_button_pressed() -> void:
 	arrow_buttons_container.add_child(move_down_button)
 	move_down_button.pressed.connect(_on_change_order_pressed.bind(move_down_button, false))
 
-	## Add an up and down arrow button here, somehow. Maybe even
-	## use another V-Box Container node to have 2 buttons, one
-	## for the up arrow and one for the down. When either of those
-	## are clicked, move the children up or down in the main
-	## V-Box container parent, or something like that.
-
 	var button_1 = Button.new() # Remove Entry Button
 	button_1.text = "X"
 	button_1.name = "RemoveButton"
