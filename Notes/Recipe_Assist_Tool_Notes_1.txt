@@ -28,9 +28,3 @@ I'll have to think of what feature or thing to work on next in this tool. I have
 to function, so I think many of the things up there would be mostly in the later "polish" category, if I ever get to that phase. So I need to think of other more 
 necessary features to work on next. Possibly some optional multiplier for the entire current list of ingredients, such as 2x, 0.5x, etc. 
 ###
-
-10/7/2025:
-###
-Probably try and add an "overall multipler" thing that can multiply the entire current list of ingredients by the multipler given, not certain where I will put this, 
-but just likely what I will want to work on next atleast.
-###
