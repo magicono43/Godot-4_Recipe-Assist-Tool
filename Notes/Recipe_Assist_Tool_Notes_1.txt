@@ -28,3 +28,10 @@ I'll have to think of what feature or thing to work on next in this tool. I have
 to function, so I think many of the things up there would be mostly in the later "polish" category, if I ever get to that phase. So I need to think of other more 
 necessary features to work on next. Possibly some optional multiplier for the entire current list of ingredients, such as 2x, 0.5x, etc. 
 ###
+
+10/11/2025:
+###
+Maybe next thing I can work on is see if I can allow for breaking up entries into "sub-categories." A better way to put it would be like for a recipe that has multiple 
+parts to it, have a section for say the cake batter part, then another for the frosting part. So somehow make a button or something to allow for breaking the entries up 
+like that, somehow, will see how it goes in practice. 
+###

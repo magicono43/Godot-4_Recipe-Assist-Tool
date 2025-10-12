@@ -14,7 +14,8 @@ func _ready() -> void:
 	itemNames = IngredientDB.get_all_ingred_names()
 	multiplierNode = get_node("../../LineEdit")
 	multiplierNode.text_changed_extended.connect(_on_multiplier_text_changed_forwarded)
-	ingredEntryParent = get_node("../../VBoxContainer")
+	var scrollContainer = get_node("../../ScrollContainer")
+	ingredEntryParent = scrollContainer.get_node("VBoxContainer")
 
 func _on_child_text_changed_forwarded(new_text: String, parentNode: Node, source: Node):
 	get_parent().visible = false

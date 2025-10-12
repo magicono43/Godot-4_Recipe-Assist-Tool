@@ -98,6 +98,21 @@ func _on_entry_deleted():
 	_update_label_numbers()
 
 func _update_label_numbers():
+	if get_parent().get_v_scroll_bar().visible == false:
+		# Get total height of all children
+		var total_height := 0.0
+		for child in get_children():
+			if child.visible:
+				total_height += child.size.y + get_theme_constant("separation")  # account for spacing
+		# Subtract the last separation added
+		if total_height > 0:
+			total_height -= get_theme_constant("separation")
+		# Get the visible area of the ScrollContainer
+		var visible_height: float = get_parent().size.y
+		# Calculate offset to center VBox within the visible area
+		var offset: float = max((visible_height - total_height) / 2.0, 0.0)
+		position.y = offset
+
 	var entryNumber: int = 0
 	for entry in get_children():
 		if entry is HBoxContainer:

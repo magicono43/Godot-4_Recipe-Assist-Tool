@@ -15,7 +15,8 @@ func _init() -> void:
 	visible = false
 
 func _ready() -> void:
-	var newLineParent = get_parent().get_node("VBoxContainer")
+	var scrollContainer = get_parent().get_node("ScrollContainer")
+	var newLineParent = scrollContainer.get_node("VBoxContainer")
 	newLineParent.new_entry_created.connect(_on_new_entry_created)
 	newLineParent.entry_deleted.connect(_on_entry_deleted)
 
