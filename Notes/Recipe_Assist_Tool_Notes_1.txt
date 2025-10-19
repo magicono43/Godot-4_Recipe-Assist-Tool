@@ -34,4 +34,6 @@ necessary features to work on next. Possibly some optional multiplier for the en
 Maybe next thing I can work on is see if I can allow for breaking up entries into "sub-categories." A better way to put it would be like for a recipe that has multiple 
 parts to it, have a section for say the cake batter part, then another for the frosting part. So somehow make a button or something to allow for breaking the entries up 
 like that, somehow, will see how it goes in practice. 
+
+To do this, I'll probably just do more nesting nodes within other container nodes, just have to shift any other logic around depending on how deep I go. 
 ###

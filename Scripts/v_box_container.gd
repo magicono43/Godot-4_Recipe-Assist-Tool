@@ -7,7 +7,7 @@ func _ready() -> void:
 	new_entry_created.connect(_on_new_entry_created)
 	entry_deleted.connect(_on_entry_deleted)
 
-func _on_button_pressed() -> void:
+func _on_make_more_button_pressed() -> void:
 
 	var custom_h_box_container = preload("res://Scripts/CustomHBoxContainer.gd").new()
 	add_child(custom_h_box_container)
@@ -89,6 +89,59 @@ func _on_button_pressed() -> void:
 
 	emit_signal("new_entry_created", custom_h_box_container)
 
+func _on_add_divider_button_pressed() -> void:
+
+	var custom_h_box_container = preload("res://Scripts/CustomHBoxContainer.gd").new()
+	custom_h_box_container.custom_minimum_size = Vector2(550, 50)
+	add_child(custom_h_box_container)
+
+	var line_edit_1 = LineEdit.new()
+	line_edit_1.placeholder_text = "Type Category Name Here."
+	line_edit_1.alignment = HORIZONTAL_ALIGNMENT_CENTER
+	line_edit_1.custom_minimum_size = Vector2(585, 50)
+	line_edit_1.size_flags_horizontal = Control.SIZE_SHRINK_CENTER
+	line_edit_1.add_theme_font_size_override("font_size", 28)
+	line_edit_1.add_theme_color_override("font_color", Color(0, 0, 0))
+	line_edit_1.add_theme_color_override("font_placeholder_color", Color(0, 0, 0))
+	var styleBoxFlat_1: StyleBoxFlat = StyleBoxFlat.new()
+	styleBoxFlat_1.bg_color = Color(255, 255, 255, 0.7)
+	line_edit_1.add_theme_stylebox_override("normal", styleBoxFlat_1)
+	custom_h_box_container.add_child(line_edit_1)
+
+	var arrow_buttons_container = VBoxContainer.new()
+	arrow_buttons_container.custom_minimum_size = Vector2(20, 35)
+	arrow_buttons_container.size_flags_horizontal = Control.SIZE_SHRINK_CENTER
+	arrow_buttons_container.add_theme_constant_override("separation", 3)
+	arrow_buttons_container.clip_contents = true
+	custom_h_box_container.add_child(arrow_buttons_container)
+	var move_up_button = TextureButton.new()
+	move_up_button.texture_normal = load("res://Textures/Up_Arrow_Normal.png")
+	move_up_button.texture_hover = load("res://Textures/Up_Arrow_Hover.png")
+	move_up_button.texture_pressed = load("res://Textures/Up_Arrow_Pressed.png")
+	move_up_button.custom_minimum_size = Vector2(20, 16)
+	move_up_button.stretch_mode = TextureButton.STRETCH_KEEP
+	arrow_buttons_container.add_child(move_up_button)
+	move_up_button.pressed.connect(_on_change_order_pressed.bind(move_up_button, true))
+	var move_down_button = TextureButton.new()
+	move_down_button.texture_normal = load("res://Textures/Down_Arrow_Normal.png")
+	move_down_button.texture_hover = load("res://Textures/Down_Arrow_Hover.png")
+	move_down_button.texture_pressed = load("res://Textures/Down_Arrow_Pressed.png")
+	move_down_button.custom_minimum_size = Vector2(20, 16)
+	move_down_button.stretch_mode = TextureButton.STRETCH_KEEP
+	arrow_buttons_container.add_child(move_down_button)
+	move_down_button.pressed.connect(_on_change_order_pressed.bind(move_down_button, false))
+
+	var button_1 = Button.new() # Remove Entry Button
+	button_1.text = "X"
+	button_1.name = "RemoveButton"
+	button_1.custom_minimum_size = Vector2(20, 35)
+	button_1.size_flags_horizontal = Control.SIZE_SHRINK_CENTER
+	button_1.add_theme_font_size_override("font_size", 22)
+	custom_h_box_container.add_child(button_1)
+	button_1.pressed.connect(_on_remove_pressed.bind(button_1))
+
+	emit_signal("new_entry_created", custom_h_box_container)
+
 func _on_new_entry_created(newNode: Node):
 	await get_tree().process_frame
 	_update_label_numbers()
@@ -115,7 +168,7 @@ func _update_label_numbers():
 
 	var entryNumber: int = 0
 	for entry in get_children():
-		if entry is HBoxContainer:
+		if entry is HBoxContainer and entry.get_child(0) is Label:
 			entryNumber += 1
 			entry.get_child(0).text = str(entryNumber)
 

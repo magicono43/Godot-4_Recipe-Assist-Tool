@@ -41,13 +41,22 @@ offset_bottom = 54.0
 action_mode = 0
 text = "Make More"
 
+[node name="Button2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 64.0
+offset_right = 110.0
+offset_bottom = 98.0
+action_mode = 0
+text = "Add Divider"
+
 [node name="LineEdit" type="LineEdit" parent="."]
 custom_minimum_size = Vector2(75, 35)
 layout_mode = 0
-offset_left = 9.0
-offset_top = 71.0
-offset_right = 84.0
-offset_bottom = 106.0
+offset_left = 13.0
+offset_top = 113.0
+offset_right = 88.0
+offset_bottom = 148.0
 script = ExtResource("2_2wqj3")
 
 [node name="Panel" type="Panel" parent="."]
@@ -64,4 +73,5 @@ offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("4_2wqj3")
 
-[connection signal="pressed" from="Button" to="ScrollContainer/VBoxContainer" method="_on_button_pressed"]
+[connection signal="pressed" from="Button" to="ScrollContainer/VBoxContainer" method="_on_make_more_button_pressed"]
+[connection signal="pressed" from="Button2" to="ScrollContainer/VBoxContainer" method="_on_add_divider_button_pressed"]
