@@ -29,11 +29,11 @@ to function, so I think many of the things up there would be mostly in the later
 necessary features to work on next. Possibly some optional multiplier for the entire current list of ingredients, such as 2x, 0.5x, etc. 
 ###
 
-10/11/2025:
+10/19/2025:
 ###
-Maybe next thing I can work on is see if I can allow for breaking up entries into "sub-categories." A better way to put it would be like for a recipe that has multiple 
-parts to it, have a section for say the cake batter part, then another for the frosting part. So somehow make a button or something to allow for breaking the entries up 
-like that, somehow, will see how it goes in practice. 
+The next feature (that will be more difficult than the past few weeks.) would be a way to add custom ingredients to the "database." So if you have osme item with particular 
+values that isn't on the fairly short list of existing "default" ingredients, you can make entirely custom ones and those would be taken into account just like all of the 
+other existing one, but more than likely stored in a seperate .json file. 
 
-To do this, I'll probably just do more nesting nodes within other container nodes, just have to shift any other logic around depending on how deep I go. 
+Have some idea how I might do this, but will have to do alot of research and testing to get the basic input and file creation stuff working, but will see how it goes, etc. 
 ###

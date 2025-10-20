@@ -8,7 +8,6 @@ func _ready() -> void:
 	entry_deleted.connect(_on_entry_deleted)
 
 func _on_make_more_button_pressed() -> void:
-
 	var custom_h_box_container = preload("res://Scripts/CustomHBoxContainer.gd").new()
 	add_child(custom_h_box_container)
 
@@ -26,7 +25,6 @@ func _on_make_more_button_pressed() -> void:
 	custom_line_edit.placeholder_text = "Item Name"
 	custom_line_edit.custom_minimum_size = Vector2(250, 35)
 	custom_line_edit.set_allow_regex("^[A-Za-z]*$")
-	#line_edit.gui_input.connect(_on_lineedit_gui_input)
 	custom_h_box_container.add_child(custom_line_edit)
 	custom_h_box_container.textEntryRefs.append(custom_line_edit)
 
@@ -90,7 +88,6 @@ func _on_make_more_button_pressed() -> void:
 	emit_signal("new_entry_created", custom_h_box_container)
 
 func _on_add_divider_button_pressed() -> void:
-
 	var custom_h_box_container = preload("res://Scripts/CustomHBoxContainer.gd").new()
 	custom_h_box_container.custom_minimum_size = Vector2(550, 50)
 	add_child(custom_h_box_container)
@@ -100,7 +97,7 @@ func _on_add_divider_button_pressed() -> void:
 	line_edit_1.alignment = HORIZONTAL_ALIGNMENT_CENTER
 	line_edit_1.custom_minimum_size = Vector2(585, 50)
 	line_edit_1.size_flags_horizontal = Control.SIZE_SHRINK_CENTER
-	line_edit_1.add_theme_font_size_override("font_size", 28)
+	line_edit_1.add_theme_font_size_override("font_size", 32)
 	line_edit_1.add_theme_color_override("font_color", Color(0, 0, 0))
 	line_edit_1.add_theme_color_override("font_placeholder_color", Color(0, 0, 0))
 	var styleBoxFlat_1: StyleBoxFlat = StyleBoxFlat.new()
@@ -190,6 +187,7 @@ func _on_change_order_pressed(button: TextureButton, upOrDown: bool) -> void:
 
 	await get_tree().process_frame
 	_update_label_numbers()
+	Input.warp_mouse(button.get_global_position() + button.size / 2)
 	emit_signal("entry_deleted") # Just to hide auto-complete box if visible.
 
 func _on_remove_pressed(button: Button) -> void:
