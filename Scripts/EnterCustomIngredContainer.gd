@@ -4,6 +4,15 @@ func _ready() -> void:
 	_populate_children_nodes()
 
 func _populate_children_nodes() -> void:
+	var button_1 = Button.new() # Remove Entry Button
+	button_1.text = "X"
+	button_1.name = "RemoveButton"
+	button_1.custom_minimum_size = Vector2(20, 35)
+	button_1.size_flags_horizontal = Control.SIZE_SHRINK_CENTER
+	button_1.add_theme_font_size_override("font_size", 22)
+	add_child(button_1)
+	button_1.pressed.connect(_on_reset_fields_pressed.bind(button_1))
+
 	var h_box_container_1 = HBoxContainer.new()
 	h_box_container_1.alignment = BoxContainer.ALIGNMENT_CENTER
 	h_box_container_1.custom_minimum_size = Vector2(550, 35)
@@ -87,3 +96,17 @@ func _populate_children_nodes() -> void:
 		# Calculate offset to center VBox within the visible area
 		var offset: float = max((visible_height - total_height) / 2.0, 0.0)
 		position.y = offset
+
+func _on_reset_fields_pressed(button: Button) -> void:
+	##var parent: Node = button.get_parent()
+	for child in get_children():
+		if child is HBoxContainer:
+			for grandchild in child.get_children():
+				if grandchild is LineEdit:
+					grandchild._last_valid_text = ""
+					grandchild.text = ""
+	await get_tree().process_frame
+	##emit_signal("entry_deleted")
+
+## See about maybe having the "Alias" fields generate more betlow each
+## other when the previous ones get filled? Or something like that, will see.
